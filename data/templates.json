@@ -1,0 +1,54 @@
+[
+  {
+    "id": "a6177fca-9bab-4cf9-b032-b78f9c18b34c",
+    "name": "Minimal Quote",
+    "description": "Clean typography with simple background",
+    "backgroundColor": "#f8fafc",
+    "textColor": "#1e293b",
+    "fontFamily": "Inter",
+    "fontSize": 24,
+    "isPublic": true,
+    "usageCount": 47,
+    "thumbnail": null,
+    "createdAt": "2025-08-30T00:13:01.520Z"
+  },
+  {
+    "id": "67e0fa46-193b-482b-964b-6b1a53cdab9d",
+    "name": "Gradient Style",
+    "description": "Modern gradient backgrounds",
+    "backgroundColor": "#8b5cf6",
+    "textColor": "#ffffff",
+    "fontFamily": "Inter",
+    "fontSize": 28,
+    "isPublic": true,
+    "usageCount": 32,
+    "thumbnail": null,
+    "createdAt": "2025-08-30T00:13:01.520Z"
+  },
+  {
+    "id": "af800e3d-ffed-4612-bbf6-e16932b43cc8",
+    "name": "Bold Typography",
+    "description": "Strong visual impact with bold fonts",
+    "backgroundColor": "#1e293b",
+    "textColor": "#f59e0b",
+    "fontFamily": "Inter",
+    "fontSize": 32,
+    "isPublic": true,
+    "usageCount": 28,
+    "thumbnail": null,
+    "createdAt": "2025-08-30T00:13:01.520Z"
+  },
+  {
+    "id": "4dd7c6b9-5df0-4b1d-919a-7304b9134be5",
+    "name": "Nature Theme",
+    "description": "Organic elements and earth tones",
+    "backgroundColor": "#059669",
+    "textColor": "#ffffff",
+    "fontFamily": "Inter",
+    "fontSize": 24,
+    "isPublic": true,
+    "usageCount": 23,
+    "thumbnail": null,
+    "createdAt": "2025-08-30T00:13:01.520Z"
+  }
+]

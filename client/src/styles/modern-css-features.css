@@ -1,0 +1,419 @@
+/* Modern CSS Features for 2025 - Container Queries, Subgrid, and Advanced Layouts */
+
+/* Container Query Support */
+:root {
+  container-type: inline-size;
+}
+
+/* Dashboard Grid with Subgrid */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  container-type: inline-size;
+}
+
+.dashboard-section {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+  gap: inherit;
+}
+
+.stats-grid {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+}
+
+.stats-card {
+  container-type: inline-size;
+  min-height: 120px;
+}
+
+/* Container Queries for Responsive Components */
+@container (min-width: 200px) {
+  .stats-card {
+    padding: 1rem;
+  }
+  
+  .stats-card .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@container (min-width: 300px) {
+  .stats-card {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .stats-card .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .stats-card .content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+@container (min-width: 400px) {
+  .stats-card {
+    padding: 2rem;
+  }
+  
+  .stats-card .value {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .stats-card .label {
+    font-size: 0.875rem;
+    opacity: 0.7;
+  }
+}
+
+/* Card Component Container Queries */
+.card-container {
+  container-type: inline-size;
+}
+
+@container (min-width: 250px) {
+  .card-content {
+    padding: 1rem;
+  }
+}
+
+@container (min-width: 350px) {
+  .card-content {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    align-items: start;
+  }
+}
+
+@container (min-width: 500px) {
+  .card-content {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .card-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+}
+
+/* Chat Interface Container Queries */
+.chat-container {
+  container-type: inline-size;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+}
+
+@container (min-width: 400px) {
+  .chat-message {
+    max-width: 80%;
+    padding: 0.75rem 1rem;
+  }
+}
+
+@container (min-width: 600px) {
+  .chat-message {
+    max-width: 70%;
+    padding: 1rem 1.25rem;
+  }
+  
+  .chat-input-container {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@container (min-width: 800px) {
+  .chat-message {
+    max-width: 60%;
+  }
+  
+  .chat-sidebar {
+    display: block;
+    width: 250px;
+  }
+  
+  .chat-main {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 1rem;
+  }
+}
+
+/* Advanced Grid Layouts with Subgrid */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  container-type: inline-size;
+}
+
+.content-section {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+}
+
+.content-header {
+  grid-row: 1;
+}
+
+.content-body {
+  grid-row: 2;
+}
+
+.content-footer {
+  grid-row: 3;
+  align-self: end;
+}
+
+/* Form Layouts with Container Queries */
+.form-container {
+  container-type: inline-size;
+}
+
+@container (min-width: 300px) {
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@container (min-width: 500px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  
+  .form-field-full {
+    grid-column: 1 / -1;
+  }
+}
+
+@container (min-width: 700px) {
+  .form-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  .form-field-half {
+    grid-column: span 2;
+  }
+}
+
+/* Navigation with Container Queries */
+.navigation-container {
+  container-type: inline-size;
+}
+
+@container (min-width: 200px) {
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+  
+  .nav-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  .nav-label {
+    display: none;
+  }
+}
+
+@container (min-width: 250px) {
+  .nav-label {
+    display: block;
+    font-size: 0.875rem;
+  }
+}
+
+@container (min-width: 300px) {
+  .nav-item {
+    padding: 0.75rem 1rem;
+  }
+  
+  .nav-label {
+    font-size: 1rem;
+  }
+}
+
+/* Modern CSS Features */
+
+/* CSS Nesting */
+.modern-button {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border: none;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: hsl(var(--primary) / 0.9);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px hsl(var(--primary) / 0.3);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+}
+
+/* CSS Custom Properties with Fallbacks */
+.theme-aware-component {
+  --component-bg: light-dark(#ffffff, #1a1a1a);
+  --component-text: light-dark(#000000, #ffffff);
+  --component-border: light-dark(#e5e5e5, #404040);
+  
+  background: var(--component-bg);
+  color: var(--component-text);
+  border: 1px solid var(--component-border);
+}
+
+/* Advanced Selectors */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  
+  /* Style every 3rd card differently */
+  & > :nth-child(3n) {
+    background: hsl(var(--accent));
+  }
+  
+  /* Style cards that have focus within */
+  & > :focus-within {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+  
+  /* Style cards based on content */
+  & > :has(.priority-high) {
+    border-left: 4px solid hsl(var(--destructive));
+  }
+  
+  & > :has(.priority-medium) {
+    border-left: 4px solid hsl(var(--warning));
+  }
+  
+  & > :has(.priority-low) {
+    border-left: 4px solid hsl(var(--success));
+  }
+}
+
+/* Scroll-driven Animations */
+@supports (animation-timeline: scroll()) {
+  .scroll-progress {
+    animation: scroll-progress linear;
+    animation-timeline: scroll(root);
+    animation-range: 0% 100%;
+  }
+  
+  @keyframes scroll-progress {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+}
+
+/* View Transitions API */
+@supports (view-transition-name: none) {
+  .page-transition {
+    view-transition-name: page-content;
+  }
+  
+  ::view-transition-old(page-content) {
+    animation: slide-out 0.3s ease-out;
+  }
+  
+  ::view-transition-new(page-content) {
+    animation: slide-in 0.3s ease-out;
+  }
+  
+  @keyframes slide-out {
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes slide-in {
+    from {
+      transform: translateX(100%);
+    }
+  }
+}
+
+/* Logical Properties */
+.logical-spacing {
+  padding-block: 1rem;
+  padding-inline: 1.5rem;
+  margin-block-start: 2rem;
+  border-inline-start: 2px solid hsl(var(--border));
+}
+
+/* Modern Color Functions */
+.modern-colors {
+  background: oklch(0.7 0.15 180);
+  color: oklch(0.2 0.02 180);
+  border-color: color-mix(in oklch, oklch(0.7 0.15 180) 50%, transparent);
+}
+
+/* Modern CSS Components (without conflicting layers) */
+.modern-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.modern-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

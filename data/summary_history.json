@@ -1,0 +1,12 @@
+[
+  {
+    "id": "946da20c-5e39-45df-8ca4-64f6b558ea02",
+    "prompt": "Create a professional executive summary suitable for busy decision-makers. Focus on business impact, strategic implications, and actionable insights. Be direct, factual, and highlight any metrics or KPIs mentioned in the text. Limit to 1 paragraphs.",
+    "content": "The effects of climate change are already pronounced, with increased frequency and severity of extreme weather events like heatwaves, droughts, and floods. Melting glaciers and ice sheets contribute to rising sea levels, which threaten coastal areas globally. Climate change exacerbates risks to food security and spreads climate-sensitive diseases. Limiting global warming to 1.5°C above pre-industrial levels could mitigate severe impacts, but warming of 2°C or more risks irreversible environmental changes such as the collapse of ice sheets and extinction of species. Vulnerable populations, especially in poorer nations, are disproportionately affected. Despite progress in renewable energy and emissions reductions, current policies may lead to a 3°C rise by century's end, underscoring the urgent need for action.",
+    "summary": " In a nutshell, climate change is causing more frequent and severe extreme weather events such as heatwaves, droughts, and floods. This has far-reaching implications for coastal areas, food security, and health. The collapse of ice sheets and extinction of species may occur if global warming exceeds 2°C above pre-industrial levels, with vulnerable populations in poorer nations suffering disproportionately. While progress has been made in renewable energy and emissions reductions, current policies are projected to lead to a 3°C increase by the end of the century, highlighting the urgent need for decisive action to limit warming to 1.5°C and mitigate the worst environmental changes.",
+    "model": "mistral:latest",
+    "provider": "ollama",
+    "timestamp": "2025-09-02T21:57:42.742Z",
+    "tokens": 440
+  }
+]

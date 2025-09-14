@@ -1,0 +1,58 @@
+[
+  {
+    "id": "chat_1757837655939",
+    "title": "New Chat",
+    "messages": [
+      {
+        "id": "msg_1757837687556",
+        "role": "user",
+        "content": "Summarize the key points and action items from our meeting about \"How to travel from Lyon to Paris\" ?",
+        "timestamp": "2025-09-14T08:14:47.556Z"
+      },
+      {
+        "id": "msg_1757837688252_assistant",
+        "role": "assistant",
+        "content": "We didn't have a previous conversation, so there's nothing for me to summarize. This is our first interaction! Let's start fresh - how can I help you with traveling from Lyon to Paris?",
+        "timestamp": "2025-09-14T08:14:48.252Z",
+        "metadata": {
+          "model": "llama3.2:latest",
+          "provider": "ollama"
+        }
+      },
+      {
+        "id": "msg_1757837695312",
+        "role": "user",
+        "content": "Yes",
+        "timestamp": "2025-09-14T08:14:55.312Z"
+      },
+      {
+        "id": "msg_1757837696104_assistant",
+        "role": "assistant",
+        "content": "No worries then! So, let's start fresh. You wanted to know about traveling from Lyon to Paris? What specific aspects of the trip are you looking for advice on? Transportation options, accommodation, sightseeing ideas, or something else?",
+        "timestamp": "2025-09-14T08:14:56.104Z",
+        "metadata": {
+          "model": "llama3.2:latest",
+          "provider": "ollama"
+        }
+      },
+      {
+        "id": "msg_1757837704732",
+        "role": "user",
+        "content": "Transport",
+        "timestamp": "2025-09-14T08:15:04.732Z"
+      },
+      {
+        "id": "msg_1757837707451_assistant",
+        "role": "assistant",
+        "content": "Transportation is a great starting point!\n\nThere are several ways to travel from Lyon to Paris. Here are some popular options:\n\n1. **Train**: The TGV (Train à Grande Vitesse) is the fastest way to get to Paris, with trains departing from Lyon's Part-Dieu station every 15-30 minutes.\n2. **Bus**: Taking the bus is a budget-friendly option, with companies like FlixBus and Ouibus operating regular services from Lyon to Paris.\n3. **Flight**: You can also fly from Lyon's Saint Exupéry airport to Paris' Charles de Gaulle or Orly airports.\n4. **Car**: Driving from Lyon to Paris takes around 5-6 hours depending on traffic, and you'll need to consider tolls and parking fees.\n\nWhat type of transportation are you leaning towards? Are you short on time, looking for a budget-friendly option, or don't mind taking your time to enjoy the journey?",
+        "timestamp": "2025-09-14T08:15:07.451Z",
+        "metadata": {
+          "model": "llama3.2:latest",
+          "provider": "ollama"
+        }
+      }
+    ],
+    "createdAt": "2025-09-14T08:14:15.939Z",
+    "updatedAt": "2025-09-14T08:15:07.451Z"
+  }
+]

@@ -1,0 +1,90 @@
+{
+  "users": [
+    {
+      "userId": "admin-001",
+      "activity": {
+        "totalLogins": 42,
+        "lastLogin": "2025-08-31T18:15:23Z",
+        "totalSessions": 56,
+        "averageSessionDuration": 1800,
+        "apiRequests": {
+          "total": 1245,
+          "byEndpoint": {
+            "/api/chat": 856,
+            "/api/ollama": 124,
+            "/api/lmstudio": 89,
+            "/api/translate": 67,
+            "/api/prompt-improver": 109
+          }
+        },
+        "featuresUsed": {
+          "chat": {
+            "count": 856,
+            "lastUsed": "2025-08-31T18:20:12Z"
+          },
+          "translate": {
+            "count": 67,
+            "lastUsed": "2025-08-30T14:12:45Z"
+          },
+          "promptImprover": {
+            "count": 109,
+            "lastUsed": "2025-08-29T09:45:22Z"
+          },
+          "localLLMs": {
+            "count": 213,
+            "lastUsed": "2025-08-31T17:55:10Z"
+          }
+        },
+        "weeklyActivity": [
+          {"week": "2025-08-25", "apiCalls": 145, "logins": 5},
+          {"week": "2025-08-18", "apiCalls": 132, "logins": 4},
+          {"week": "2025-08-11", "apiCalls": 156, "logins": 6},
+          {"week": "2025-08-04", "apiCalls": 128, "logins": 5}
+        ]
+      }
+    },
+    {
+      "userId": "user-002",
+      "activity": {
+        "totalLogins": 28,
+        "lastLogin": "2025-08-30T10:22:15Z",
+        "totalSessions": 35,
+        "averageSessionDuration": 1200,
+        "apiRequests": {
+          "total": 782,
+          "byEndpoint": {
+            "/api/chat": 543,
+            "/api/ollama": 86,
+            "/api/lmstudio": 42,
+            "/api/translate": 54,
+            "/api/prompt-improver": 57
+          }
+        },
+        "featuresUsed": {
+          "chat": {
+            "count": 543,
+            "lastUsed": "2025-08-30T10:45:18Z"
+          },
+          "translate": {
+            "count": 54,
+            "lastUsed": "2025-08-29T16:32:40Z"
+          },
+          "promptImprover": {
+            "count": 57,
+            "lastUsed": "2025-08-28T11:20:15Z"
+          },
+          "localLLMs": {
+            "count": 128,
+            "lastUsed": "2025-08-30T09:15:22Z"
+          }
+        },
+        "weeklyActivity": [
+          {"week": "2025-08-25", "apiCalls": 98, "logins": 3},
+          {"week": "2025-08-18", "apiCalls": 105, "logins": 4},
+          {"week": "2025-08-11", "apiCalls": 112, "logins": 4},
+          {"week": "2025-08-04", "apiCalls": 95, "logins": 3}
+        ]
+      }
+    }
+  ]
+}

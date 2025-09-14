@@ -1,0 +1,116 @@
+[
+  {
+    "id": "chat-1",
+    "category": "chat",
+    "label": "Product Comparison",
+    "text": "Compare the features, pricing, and user experience of Product A and Product B."
+  },
+  {
+    "id": "chat-2",
+    "category": "chat",
+    "label": "Code Review",
+    "text": "Review this code snippet for bugs and suggest improvements: [paste code here]"
+  },
+  {
+    "id": "chat-3",
+    "category": "chat",
+    "label": "Meeting Summary",
+    "text": "Summarize the key points and action items from our meeting about [topic]."
+  },
+  {
+    "id": "chat-4",
+    "category": "chat",
+    "label": "Learning Plan",
+    "text": "Create a 30-day learning plan for mastering [skill/technology]."
+  },
+  {
+    "id": "chat-5",
+    "category": "chat",
+    "label": "Problem Solving",
+    "text": "Help me troubleshoot this issue: [describe problem]"
+  },
+  {
+    "id": "translate-1",
+    "category": "translate",
+    "label": "Business Email",
+    "text": "Dear [Name], I'm writing to follow up on our recent discussion about the project timeline."
+  },
+  {
+    "id": "translate-2",
+    "category": "translate",
+    "label": "Technical Documentation",
+    "text": "The system architecture consists of three main components: the frontend interface, the API layer, and the database."
+  },
+  {
+    "id": "translate-3",
+    "category": "translate",
+    "label": "Travel Phrases",
+    "text": "Could you please direct me to the nearest train station? I need to purchase a ticket."
+  },
+  {
+    "id": "translate-4",
+    "category": "translate",
+    "label": "Product Description",
+    "text": "Our flagship product features an intuitive interface, powerful analytics, and seamless integration with your existing tools."
+  },
+  {
+    "id": "translate-5",
+    "category": "translate",
+    "label": "Academic Abstract",
+    "text": "This research examines the impact of artificial intelligence on workplace productivity across various industries."
+  },
+  {
+    "id": "prompt-1",
+    "category": "prompt",
+    "label": "Blog Introduction",
+    "text": "Write an introduction for a blog post about sustainable living practices."
+  },
+  {
+    "id": "prompt-2",
+    "category": "prompt",
+    "label": "Product Description",
+    "text": "Create a compelling product description for a new wireless headphone set."
+  },
+  {
+    "id": "prompt-3",
+    "category": "prompt",
+    "label": "Interview Questions",
+    "text": "Generate interview questions for a senior software developer position."
+  },
+  {
+    "id": "prompt-4",
+    "category": "prompt",
+    "label": "Marketing Email",
+    "text": "Draft a marketing email announcing our upcoming summer sale."
+  },
+  {
+    "id": "prompt-5",
+    "category": "prompt",
+    "label": "Feature Request",
+    "text": "Write a detailed feature request for adding dark mode to our application."
+  },
+  {
+    "id": "summary-1",
+    "category": "summary",
+    "label": "Expert Summary",
+    "text": "You are an expert summarizer. Read the following text carefully and produce a concise summary that captures the main ideas and key insights, removes redundancy, and uses clear, simple language. The summary should be 3-5 sentences maximum (shorter if possible) while preserving the original meaning and factual accuracy."
+  },
+  {
+    "id": "summary-2",
+    "category": "summary",
+    "label": "Bullet Points",
+    "text": "Extract the most important points from the text and present them as a bulleted list. Focus on key facts, arguments, and conclusions. Aim for 5-7 bullet points that capture the essence of the content."
+  },
+  {
+    "id": "summary-3",
+    "category": "summary",
+    "label": "ELI5 (Explain Like I'm 5)",
+    "text": "Simplify the following text as if explaining it to a child. Use simple vocabulary, short sentences, and relatable analogies. Avoid jargon and technical terms. The summary should be easy to understand for someone with no background knowledge on the topic."
+  },
+  {
+    "id": "summary-4",
+    "category": "summary",
+    "label": "Executive Brief",
+    "text": "Create a professional executive summary suitable for busy decision-makers. Focus on business impact, strategic implications, and actionable insights. Be direct, factual, and highlight any metrics or KPIs mentioned in the text. Limit to 1-2 paragraphs."
+  }
+]

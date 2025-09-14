@@ -1,4 +1,40 @@
-                                 Apache License
+/**
+ * Copyright 2025 Kunal Suri — Licensed under the Apache License 2.0 (see LICENSE file)
+ */
+
+import { Button } from "@/shared/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+import { useLocation } from "wouter";
+
+export default function TermsOfService() {
+  const [_, setLocation] = useLocation();
+
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Navigation */}
+      <nav className="border-b border-border/20 bg-background/90 backdrop-blur-lg sticky top-0 z-50 transition-all duration-300">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-20">
+            <Button 
+              variant="ghost" 
+              onClick={() => setLocation("/")}
+              className="flex items-center space-x-2 text-muted-foreground hover:text-primary"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              <span>Back</span>
+            </Button>
+            <h1 className="text-xl font-semibold">Terms of Service</h1>
+            <div className="w-24"></div> {/* Spacer for centering */}
+          </div>
+        </div>
+      </nav>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="bg-card rounded-xl shadow-lg p-8 mb-8">
+          <h2 className="text-2xl font-bold mb-6 text-center">Apache License 2.0</h2>
+          <div className="prose prose-sm dark:prose-invert max-w-none">
+            <pre className="whitespace-pre-wrap text-xs sm:text-sm font-mono bg-muted p-4 rounded-md overflow-auto">
+{`                                 Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
 
@@ -198,4 +234,11 @@
    distributed under the License is distributed on an "AS IS" BASIS,
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
-   limitations under the License.
+   limitations under the License.`}
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

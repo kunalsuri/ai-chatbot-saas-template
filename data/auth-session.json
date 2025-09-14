@@ -1,0 +1,13 @@
+{
+  "defaultUser": {
+    "id": "admin-001",
+    "username": "admin",
+    "email": "admin@marketmagic.com",
+    "password": "$2b$10$rQJ9vQJ9vQJ9vQJ9vQJ9vOJ9vQJ9vQJ9vQJ9vQJ9vQJ9vQJ9vQJ9vQ",
+    "plan": "premium",
+    "createdAt": "2025-08-30T00:00:00.000Z",
+    "lastLogin": "2025-08-30T00:00:00.000Z"
+  },
+  "sessions": {},
+  "csrfTokens": {}
+}

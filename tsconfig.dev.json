@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    // Relax some strict settings for development
+    "exactOptionalPropertyTypes": false,
+    "noUncheckedIndexedAccess": false,
+    
+    // Keep important safety checks
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    
+    // Allow some flexibility during development
+    "skipLibCheck": true
+  }
+}

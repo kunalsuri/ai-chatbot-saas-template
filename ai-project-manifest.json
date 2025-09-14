@@ -1,0 +1,210 @@
+{
+  "metadata": {
+    "name": "SaaS ChatBot AI",
+    "description": "Modern SaaS ChatBot AI platform with advanced conversation capabilities",
+    "version": "1.0.0",
+    "techStack": {
+      "frontend": {
+        "framework": "React",
+        "version": "18.3.1",
+        "language": "TypeScript",
+        "styling": "Tailwind CSS 3.4.17",
+        "routing": "Wouter",
+        "stateManagement": "React Query",
+        "uiLibrary": "Radix UI",
+        "animations": "Framer Motion 11.13.1"
+      },
+      "backend": {
+        "framework": "Express.js",
+        "language": "TypeScript 5.6.3",
+        "orm": "Drizzle ORM",
+        "logging": "Winston",
+        "validation": "Zod"
+      },
+      "ai": [
+        "OpenAI",
+        "Google Gemini",
+        "Ollama",
+        "LM Studio"
+      ],
+      "database": "JSON file storage (planned: PostgreSQL)",
+      "buildSystem": {
+        "bundler": "Vite",
+        "compiler": "ESBuild",
+        "scripts": [
+          "dev",
+          "build",
+          "start"
+        ]
+      }
+    }
+  },
+  "architecture": {
+    "entryPoints": [
+      "server/index.ts",
+      "client/src/App.tsx",
+      "client/index.html"
+    ],
+    "relatedProjects": [],
+    "keyModules": [
+      "server/routes.ts",
+      "server/services/",
+      "client/src/contexts/",
+      "shared/"
+    ],
+    "folderStructure": {
+      "client/src/": "React frontend",
+      "server/": "Express backend",
+      "shared/": "Shared types/schemas",
+      "data/": "JSON data files",
+      "docs/": "Documentation"
+    }
+  },
+  "apiSurface": {
+    "coreFunctions": [
+      {
+        "name": "registerRoutes",
+        "file": "server/routes.ts",
+        "description": "Main route registration with authentication middleware"
+      },
+      {
+        "name": "generateChatResponse",
+        "file": "server/services/chat.ts",
+        "description": "AI chat response generation"
+      },
+      {
+        "name": "TranslationService",
+        "file": "server/services/translation.ts",
+        "description": "Multi-provider translation service"
+      },
+      {
+        "name": "storage",
+        "file": "server/storage.ts",
+        "description": "Database operations and user management"
+      },
+      {
+        "name": "validateEnvironment",
+        "file": "shared/env-validation.ts",
+        "description": "Environment configuration validation"
+      }
+    ],
+    "endpoints": [
+      {
+        "method": "POST",
+        "path": "/api/auth/login",
+        "description": "User authentication with rate limiting",
+        "middleware": [
+          "authRateLimit",
+          "validateBody",
+          "csrfProtection"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/api/auth/me",
+        "description": "Current user profile",
+        "middleware": [
+          "requireAuth"
+        ]
+      },
+      {
+        "method": "POST",
+        "path": "/api/chat/message",
+        "description": "AI chat completions (Ollama/LM Studio)",
+        "middleware": [
+          "requireAuth",
+          "csrfProtection",
+          "validateBody"
+        ]
+      },
+      {
+        "method": "POST",
+        "path": "/api/translate",
+        "description": "Text translation service",
+        "middleware": [
+          "requireAuth",
+          "csrfProtection",
+          "validateBody"
+        ]
+      },
+      {
+        "method": "POST",
+        "path": "/api/prompt-improver",
+        "description": "AI prompt enhancement",
+        "middleware": [
+          "requireAuth",
+          "csrfProtection",
+          "validateBody"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/api/ollama/health",
+        "description": "Local LLM health check",
+        "middleware": [
+          "requireAuth"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/api/users",
+        "description": "User management (admin only)"
+      }
+    ]
+  },
+  "conventions": {
+    "naming": {
+      "components": "PascalCase",
+      "functions": "camelCase",
+      "files": "kebab-case",
+      "routes": "kebab-case",
+      "environment": "SCREAMING_SNAKE_CASE"
+    },
+    "typeSystem": {
+      "strict": true,
+      "noEmit": true,
+      "validationSchemas": "shared/validation.ts",
+      "apiTypes": "shared/types/api.ts"
+    },
+    "pathAliases": {
+      "@/*": "client/src/*",
+      "@shared/*": "shared/*"
+    }
+  },
+  "criticalRules": [
+    "Do not modify authentication middleware without updating CSRF protection and session management",
+    "All state-changing endpoints require CSRF tokens and authentication middleware",
+    "AI operations have 15s timeout thresholds with performance monitoring",
+    "Server fails to start with invalid configuration - strict Zod validation required"
+  ],
+  "extensionGuidelines": {
+    "addingFeatures": [
+      "Create Zod schema in shared/validation.ts for validation",
+      "Add API route in server/routes.ts with requireAuth and csrfProtection",
+      "Create React component with proper TypeScript types",
+      "Use secureApi.ts utilities for client-side API calls",
+      "Add error handling with asyncHandler wrapper"
+    ],
+    "patterns": {
+      "authentication": "requireAuth middleware + session management",
+      "validation": "Zod schemas with validateBody/validateParams",
+      "ui": "Radix UI components with Tailwind styling",
+      "state": "React Context + React Query for server state"
+    }
+  },
+  "limitations": {
+    "knownBugs": [
+      "React error #130 in UI Patterns demo (DataTable component type mismatch)",
+      "Occasional 'Slow Request Detected' warnings for AI operations"
+    ],
+    "techDebt": [
+      "Migration from JSON file storage to PostgreSQL",
+      "Comprehensive test suite implementation",
+      "Performance optimization for large chat histories",
+      "Enhanced error boundary coverage"
+    ]
+  },
+  "lastUpdated": "2025-08-30T20:27:54.480Z",
+  "manifestVersion": "1.0.0",
+  "version": "1.0.1"
+}

@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ChatGPT Light Mode Colors - Exact Specification */
+  --background: #FFFFFF; /* Main background */
+  --foreground: #202123; /* Text */
+  --card: #F9F9FB; /* Chat area */
+  --card-foreground: #202123;
+  --popover: #FFFFFF;
+  --popover-foreground: #202123;
+  --primary: #10A37F; /* Accent green */
+  --primary-foreground: #FFFFFF;
+  --secondary: #F9F9FB;
+  --secondary-foreground: #202123;
+  --muted: 210 40% 98%;
+  --muted-foreground: 215.4 16.3% 35%; /* Subtle gray for placeholders */
+  --accent: #10A37F;
+  --accent-foreground: #FFFFFF;
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: #FFFFFF;
+  --border: #EAEAEA;
+  --input: #EAEAEA; /* Chat input background */
+  --ring: #565869; /* Focus state */
+  --chart-1: #10A37F;
+  --chart-2: #19C37D;
+  --chart-3: #42A5F5;
+  --chart-4: #66BB6A;
+  --chart-5: #AB47BC;
+  
+  /* ChatGPT-style Sidebar (Light) */
+  --sidebar-background: #EAEAEA;
+  --sidebar-foreground: #202123;
+  --sidebar-primary: #10A37F;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F9F9FB;
+  --sidebar-accent-foreground: #202123;
+  --sidebar-border: #EAEAEA;
+  --sidebar-ring: #10A37F;
+  
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  --radius: 0.5rem;
+  
+  /* Brand colors */
+  --brand-50: #E8F5E8;
+  --brand-100: #C8E6C9;
+  --brand-500: #10A37F;
+  --brand-600: #0D8A6B;
+  --brand-700: #0A7157;
+  
+  /* ChatGPT-specific colors */
+  --chat-background: #FFFFFF; /* Main background */
+  --chat-area: #F9F9FB; /* Chat area */
+  --chat-sidebar: #EAEAEA; /* Sidebar */
+  --chat-input: #EAEAEA; /* Input background */
+  --chat-message-user: #F9F9FB;
+  --chat-message-assistant: #FFFFFF;
+  --chat-border: #EAEAEA;
+  --chat-text-primary: #202123;
+  --chat-text-secondary: #8E8EA0;
+  --chat-placeholder: #8E8EA0;
+  --chat-focus-border: #565869;
+  --chat-send-button: #19C37D;
+  --chat-send-button-hover: #22D68A;
+}
+
+.dark {
+  /* VSCode/ChatGPT Dark Mode Colors - Updated Specification */
+  --background: #1e1e1e; /* Main dashboard background */
+  --foreground: #ECECF1; /* Text */
+  --card: #252526; /* Card/content area background */
+  --card-foreground: #ECECF1;
+  --popover: #252526;
+  --popover-foreground: #ECECF1;
+  --primary: #10A37F; /* Accent green */
+  --primary-foreground: #FFFFFF;
+  --secondary: #2d2d30;
+  --secondary-foreground: #ECECF1;
+  --muted: #2d2d30;
+  --muted-foreground: #B3B3B3; /* Improved contrast for placeholders */
+  --accent: #10A37F;
+  --accent-foreground: #FFFFFF;
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: #FFFFFF;
+  --border: #3c3c3c;
+  --input: #2d2d30; /* Input background */
+  --ring: #565869; /* Focus state */
+  --chart-1: #10A37F;
+  --chart-2: #19C37D;
+  --chart-3: #42A5F5;
+  --chart-4: #66BB6A;
+  --chart-5: #AB47BC;
+  
+  /* VSCode-style Sidebar (Dark) - Distinctly darker than main content */
+  --sidebar-background: #121212; /* Darker sidebar background */
+  --sidebar-background-solid: #121212;
+  --sidebar-foreground: #ECECF1;
+  --sidebar-primary: #10A37F;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #1e1e1e;
+  --sidebar-accent-foreground: #ECECF1;
+  --sidebar-border: #2d2d30;
+  --sidebar-ring: #10A37F;
+  
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  --radius: 0.5rem;
+  
+  /* Brand colors */
+  --brand-50: #E8F5E8;
+  --brand-100: #C8E6C9;
+  --brand-500: #10A37F;
+  --brand-600: #0D8A6B;
+  --brand-700: #0A7157;
+  
+  /* Chat-specific colors (Dark) - Updated for new scheme */
+  --chat-background: #1e1e1e; /* Main background */
+  --chat-area: #252526; /* Chat area background */
+  --chat-sidebar: #121212; /* Darker sidebar */
+  --chat-sidebar-solid: #121212;
+  --chat-input: #2d2d30; /* Input background */
+  --chat-message-user: #2d2d30;
+  --chat-message-assistant: #252526;
+  --chat-border: #3c3c3c;
+  --chat-text-primary: #ECECF1;
+  --chat-text-secondary: #8E8EA0;
+  --chat-placeholder: #8E8EA0;
+  --chat-focus-border: #565869;
+  --chat-send-button: #19C37D;
+  --chat-send-button-hover: #22D68A;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Smooth transitions for theme switching */
+  *,
+  *::before,
+  *::after {
+    transition: 
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      color 0.3s ease,
+      fill 0.3s ease,
+      stroke 0.3s ease,
+      opacity 0.3s ease,
+      box-shadow 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  /* Disable transitions during theme change to prevent flashing */
+  .theme-changing *,
+  .theme-changing *::before,
+  .theme-changing *::after {
+    transition: none !important;
+  }
+}
+
+/* Production-ready utilities for consistent theming */
+.bg-theme-card { @apply bg-card; }
+.bg-theme-background { @apply bg-background; }
+.text-theme-foreground { @apply text-foreground; }
+.text-theme-muted { @apply text-muted-foreground; }
+.border-theme { @apply border-border; }
+
+/* Custom brand color utilities */
+.bg-brand-50 { background-color: var(--brand-50); }
+.bg-brand-100 { background-color: var(--brand-100); }
+.bg-brand-500 { background-color: var(--brand-500); }
+.bg-brand-600 { background-color: var(--brand-600); }
+.bg-brand-700 { background-color: var(--brand-700); }
+
+.text-brand-50 { color: var(--brand-50); }
+.text-brand-100 { color: var(--brand-100); }
+.text-brand-500 { color: var(--brand-500); }
+.text-brand-600 { color: var(--brand-600); }
+.text-brand-700 { color: var(--brand-700); }
+
+.border-brand-300 { border-color: hsl(258 100% 85%); }
+
+.hover\:bg-brand-50:hover { background-color: var(--brand-50); }
+.hover\:bg-brand-600:hover { background-color: var(--brand-600); }
+.hover\:text-brand-700:hover { color: var(--brand-700); }
+.hover\:border-brand-300:hover { border-color: hsl(258 100% 85%); }
+
+.group:hover .group-hover\:text-brand-700 { color: var(--brand-700); }
+
+/* Enhanced focus ring styles for better accessibility */
+.focus-visible {
+  @apply outline-none ring-2 ring-ring ring-offset-2;
+}
+
+/* Consistent focus styles across all interactive elements */
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible,
+[tabindex]:focus-visible {
+  @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+}
+
+/* Skip link specific focus styles */
+.skip-link:focus {
+  @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+}
+
+/* Custom scrollbar for sidebar */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sidebar-border) transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: var(--sidebar-border);
+  border-radius: 3px;
+  opacity: 0.5;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: var(--sidebar-foreground);
+  opacity: 0.8;
+}
+
+/* Sidebar specific scrollbar styles */
+.scrollbar-thumb-sidebar-border {
+  scrollbar-color: var(--sidebar-border) transparent;
+}
+
+.scrollbar-thumb-sidebar-border::-webkit-scrollbar-thumb {
+  background-color: var(--sidebar-border);
+}
+
+.scrollbar-track-transparent {
+  scrollbar-color: var(--sidebar-border) transparent;
+}
+
+.scrollbar-track-transparent::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Mobile responsive utilities */
+@media (max-width: 768px) {
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Prevent horizontal overflow on small screens */
+.prevent-overflow {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* ChatGPT-style utilities */
+.bg-chat-background { background-color: var(--chat-background); }
+.bg-chat-area { background-color: var(--chat-area); }
+.bg-chat-sidebar { background: var(--chat-sidebar); }
+.bg-chat-sidebar-solid { background-color: var(--chat-sidebar-solid); }
+.bg-chat-input { background-color: var(--chat-input); }
+.bg-chat-message-user { background-color: var(--chat-message-user); }
+.bg-chat-message-assistant { background-color: var(--chat-message-assistant); }
+
+.text-chat-primary { color: var(--chat-text-primary); }
+.text-chat-secondary { color: var(--chat-text-secondary); }
+.text-chat-placeholder { color: var(--chat-placeholder); }
+
+.border-chat { border-color: var(--chat-border); }
+.border-chat-focus { border-color: var(--chat-focus-border); }
+
+/* Chat-specific button styles */
+.btn-chat-send {
+  background-color: var(--chat-send-button);
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-chat-send:hover {
+  background-color: var(--chat-send-button-hover);
+  transform: scale(1.05);
+}
+
+.btn-chat-send:disabled {
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+  transform: none;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus indicators for keyboard navigation */
+.focus\:ring-2:focus {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --border: hsl(0 0% 50%);
+  }
+  
+  .dark {
+    --border: hsl(0 0% 70%);
+  }
+}
+
+/* Animations and Effects */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@keyframes gradient-x {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animate-gradient-x {
+  animation: gradient-x 3s ease infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-600 {
+  animation-delay: 600ms;
+}
+
+.animation-delay-900 {
+  animation-delay: 900ms;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Grid pattern */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Glassmorphism effects */
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+}
+
+.backdrop-blur {
+  backdrop-filter: blur(8px);
+}
+
+.backdrop-blur-lg {
+  backdrop-filter: blur(16px);
+}

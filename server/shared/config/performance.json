@@ -1,0 +1,38 @@
+{
+  "development": {
+    "slowRequestThreshold": 3000,
+    "criticalRequestThreshold": 10000,
+    "memoryThreshold": 100000000,
+    "aiOperationThreshold": 15000,
+    "description": "Development environment with relaxed thresholds for debugging"
+  },
+  "production": {
+    "slowRequestThreshold": 2000,
+    "criticalRequestThreshold": 8000,
+    "memoryThreshold": 50000000,
+    "aiOperationThreshold": 12000,
+    "description": "Production environment with balanced performance monitoring"
+  },
+  "test": {
+    "slowRequestThreshold": 5000,
+    "criticalRequestThreshold": 15000,
+    "memoryThreshold": 200000000,
+    "aiOperationThreshold": 20000,
+    "description": "Test environment with very relaxed thresholds"
+  },
+  "endpointSpecificThresholds": {
+    "/api/chat/message": 15000,
+    "/api/ollama/": 20000,
+    "/api/lmstudio/": 20000,
+    "/api/prompt-improver": 12000,
+    "/api/translate": 10000,
+    "/api/auth/": 1000
+  },
+  "notes": {
+    "slowRequestThreshold": "Threshold in ms for logging slow requests",
+    "criticalRequestThreshold": "Threshold in ms for logging critical performance issues",
+    "memoryThreshold": "Memory usage threshold in bytes",
+    "aiOperationThreshold": "Special threshold for AI-related operations",
+    "endpointSpecificThresholds": "Custom thresholds for specific API endpoints"
+  }
+}

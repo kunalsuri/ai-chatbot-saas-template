@@ -1,0 +1,24 @@
+{
+  "translations": [
+    {
+      "id": "7957d8a6-150f-4d51-85e4-77a1c2838393",
+      "original": "Dear [Name], I'm writing to follow up on our recent discussion about the project timeline.",
+      "translated": "Cher(e) [Nom], je voulais suivre l'étape de notre dernière conversation sur la chronologie du projet.",
+      "sourceLang": "en",
+      "targetLang": "fr",
+      "model": "llama3.2:latest",
+      "tokens": 0,
+      "timestamp": "2025-09-14T08:12:59.118Z"
+    },
+    {
+      "id": "0549793c-0767-43cd-9760-30f511f9a85d",
+      "original": "Could you please direct me to the nearest train station? I need to purchase a ticket.",
+      "translated": "Pouvez-vous m'aider à trouver la gare la plus proche ? Je dois acheter un billet.",
+      "sourceLang": "en",
+      "targetLang": "fr",
+      "model": "llama3.2:latest",
+      "tokens": 0,
+      "timestamp": "2025-09-13T23:10:27.697Z"
+    }
+  ]
+}
