@@ -1,55 +1,69 @@
 # General + React + TypeScript Ruleset
 
-- **Meta Rule**
-  - Ensure full compliance with recent industry best practices
-  - Focus on Feature-Driven Modular Architecture in React
-  - Audit, refactor, and implement all necessary changes to fix existing errors and issues.
-  - Be concise, precise; avoid generating speculative or context-less code (no hallucinations).
-  - All code must prioritize readability and simplicity.
-  - All code must be modular: create smaller, reusable components for maintainability
-  - All code 
-  - All rules apply exclusively to React + TypeScript (web) projects.
+## Meta Rule
+- Ensure full compliance with recent industry best practices.
+- Follow **Feature-Driven Modular Architecture** in React.
+- Audit, refactor, and fix existing errors or issues before adding new code.
+- Be concise and precise; avoid speculative or context-less code (no hallucinations).
+- Prioritize readability, simplicity, and maintainability.
+- Always implement code as **modular, reusable components**.
+- Rules apply exclusively to **React + TypeScript (web) projects**.
 
-- **Code Style**
-  - Components must be functional and use React hooks for state and lifecycle management; classes are disallowed.
-  - No side effects or asynchronous logic directly inside render methods.
-  - Code must be modular with no duplication.
+## Code Style
+- Use **functional components** with React hooks; classes are disallowed.
+- No side effects or async logic inside render methods.
+- Avoid code duplication; extract shared logic into hooks or utilities.
+- Keep components small and single-responsibility.
 
-- **Naming**
-  - Directories use lowercase-dash style (e.g., `components/auth-wizard`).
-  - Variables must be descriptive and use auxiliary verbs (`isLoading`, `hasError`).
-  - Custom hooks must be prefixed with `use` (e.g., `useFetch`).
-  - Use named exports primarily; default export reserved for main components only.
+## Naming
+- Directories: `lowercase-dash` style (e.g., `components/auth-wizard`).
+- Variables: descriptive, use auxiliary verbs (`isLoading`, `hasError`).
+- Custom hooks: prefixed with `use` (e.g., `useFetch`).
+- Use named exports; reserve default export only for main components.
 
-- **TypeScript**
-  - Use TypeScript with strict mode enabled including strict null checks.
-  - Prefer `interface` over `type` for object shapes to ensure clearer contracts.
-  - Avoid `any`: allowed only with explicit comments justifying its use.
-  - Avoid `enum` unless string enums are explicitly needed.
-  - TypeScript strict mode must be enabled.  
+## TypeScript
+- Enable **strict mode** including strict null checks.
+- Prefer `interface` over `type` for object contracts.
+- Avoid `any`; only allowed with explicit comments justifying its use.
+- Avoid `enum` unless string enums are explicitly needed.
 
-- **Syntax**
-  - Pure functions must use the function keyword.
-  - Prefer arrow functions for callbacks unless explicit function keyword is required (e.g., for dynamic this).
-  - Always use braces {} for conditionals and blocks, even if they contain a single statement, to improve readability and avoid errors.
-  - JSX must be declarative.
+## Syntax
+- Use `function` keyword for pure functions.
+- Prefer arrow functions for callbacks unless `function` is required (e.g., dynamic `this`).
+- Always use braces `{}` for conditionals and blocks, even for single statements.
+- JSX must remain declarative.
 
-- **Formatting**
-  - Prettier formatting must be enforced.  
+## Formatting & Linting
+- Enforce **Prettier** for formatting.
+- Use **ESLint** with recommended React + TypeScript rules.
+- Ensure code passes linting before completion.
 
-- **Styling**
-  - Styling must use Tailwind CSS or styled-components.  
-  - Layouts must be responsive using Flexbox, Grid, or container queries.  
-  - Dark mode must be supported with CSS variables or `next-themes`.  
-  - For Tailwind CSS, mention configuration files if relevant.
-  - If using styled-components, mention naming conventions and avoiding inline styles.
+## Styling
+- Use **Tailwind CSS** or **styled-components**.
+- Layouts must be responsive (Flexbox, Grid, or container queries).
+- Support dark mode with CSS variables or `next-themes`.
+- For Tailwind: respect configuration files.
+- For styled-components: use consistent naming, avoid inline styles.
 
-- **Accessibility**
-  - Semantic HTML must be used.  
-  - ARIA roles must be applied where appropriate.
-  - Test accessibility using tools like Lighthouse or axe.  
-  - Verify keyboard navigation support and focus management.
+## Accessibility
+- Use **semantic HTML** elements.
+- Apply ARIA roles only where appropriate.
+- Verify keyboard navigation support and focus management.
+- Test accessibility with **Lighthouse** or **axe**.
 
-- **Animations**
-  - Animations must use Framer Motion or React Spring.
-  - Minimize overuse of animations to avoid performance issues
+## Animations
+- Use **Framer Motion** or **React Spring**.
+- Keep animations minimal to avoid performance issues.
+
+## Error Handling
+- Handle all async operations with proper `try/catch` or error boundaries.
+- Display user-friendly error states (e.g., fallback UI, toast notifications).
+
+## Testing
+- Write unit tests for components (Jest + React Testing Library).
+- Ensure new features include coverage for critical paths.
+
+## Output Expectations (for AI agent)
+- Provide complete code blocks per file, prefixed with filename (e.g., `// src/components/Button.tsx`).
+- Include comments for complex logic.
+- After code, provide a short **checklist of integration steps**.
